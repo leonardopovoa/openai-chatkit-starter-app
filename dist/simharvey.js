@@ -18,7 +18,7 @@ export async function initSimHarvey(containerId = "simharvey-container") {
   const chat = document.createElement("openai-chatkit");
   chat.setOptions({
     api: { getClientSecret },
-    model: "workflow:wf_68ff9b3428ac8190b1a964d040fbbb860b8b4c72b245aab0@2",
+    model: "workflow:wf_68ff9b3428ac8190b1a964d040fbbb860b8b4c72b245aab0@4",
     theme: {
       colorScheme: "light",
       color: { accent: { primary: "#6a4f9e" } },
