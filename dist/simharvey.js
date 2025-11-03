@@ -17,6 +17,7 @@ export async function initSimHarvey(containerId = "simharvey-container") {
     }
   }
 
+  // 🩺 Criação do elemento do chat
   const chat = document.createElement("openai-chatkit");
   chat.setOptions({
     api: { getClientSecret },
@@ -38,7 +39,7 @@ export async function initSimHarvey(containerId = "simharvey-container") {
       }
     },
     startScreen: {
-      greeting: "👨‍⚕️ Olá! Eu sou o SimHarvey, seu paciente virtual.",
+      greeting: "👨‍⚕️ Olá! Eu sou o SimHarvey, seu paciente virtual de cardiologia.",
       prompts: [
         { name: "Iniciar consulta", prompt: "Olá, qual é o motivo da sua consulta hoje?" },
         { name: "Anamnese", prompt: "Conte seus sintomas, por favor." },
@@ -48,6 +49,7 @@ export async function initSimHarvey(containerId = "simharvey-container") {
     composer: { placeholder: "Digite aqui sua pergunta..." }
   });
 
+  // 💅 Estilo do container do chat
   Object.assign(chat.style, {
     width: "100%",
     height: "650px",
@@ -56,10 +58,40 @@ export async function initSimHarvey(containerId = "simharvey-container") {
     boxShadow: "0 0 20px rgba(0,0,0,0.1)"
   });
 
+  // 🧩 Cabeçalho personalizado
+  const header = document.createElement("div");
+  header.style.display = "flex";
+  header.style.alignItems = "center";
+  header.style.gap = "10px";
+  header.style.background = "#6a4f9e";
+  header.style.color = "white";
+  header.style.fontFamily = "Montserrat, sans-serif";
+  header.style.fontWeight = "600";
+  header.style.fontSize = "18px";
+  header.style.padding = "12px 16px";
+  header.style.borderRadius = "16px 16px 0 0";
+
+  const logo = document.createElement("img");
+  logo.src = "https://toonline.com.br/simharvey-logo.png"; // ⬅️ Coloque aqui o link real do seu logo
+  logo.alt = "SimHarvey Logo";
+  logo.style.height = "32px";
+  logo.style.borderRadius = "50%";
+  logo.style.background = "white";
+  logo.style.padding = "2px";
+
+  const title = document.createElement("span");
+  title.textContent = "SimHarvey 🩺 | Paciente Virtual de Cardiologia";
+
+  header.appendChild(logo);
+  header.appendChild(title);
+
+  // 🚀 Montagem final no container
   const container = document.getElementById(containerId) || document.body;
   container.innerHTML = "";
+  container.appendChild(header);
   container.appendChild(chat);
 
-  console.log("✅ SimHarvey v4 carregado com sucesso!");
+  console.log("✅ SimHarvey v4 carregado com sucesso com cabeçalho personalizado!");
 }
+
 
