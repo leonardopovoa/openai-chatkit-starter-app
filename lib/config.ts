@@ -7,8 +7,8 @@ export const CREATE_SESSION_ENDPOINT = "/api/create-session";
 
 export const STARTER_PROMPTS: StartScreenPrompt[] = [
   {
-    label: "Digie um oi para começar",
-    prompt: "Digite um oi para começar",
+    label: "Seja bem vindo ao SimHarvey",
+    prompt: "Seja bem vindo ao SimHarvey",
     icon: "circle-question",
   },
 ];
