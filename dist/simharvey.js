@@ -30,9 +30,9 @@ export async function initSimHarvey(containerId = "simharvey-container") {
     i18n: {
       locale: "pt-BR",
       strings: {
-        "How can I help you today?": "Como posso ajudar hoje?",
-        "What can you do?": "O que você pode fazer?",
-        "Ask anything...": "Digite sua pergunta...",
+        "How can I help you today?": "Diga um oi para começar",
+        "What can you do?": "Ao final escreva assim: meu diagnostico é...",
+        "Ask anything...": "Diga um oi para começar.",
         "Send": "Enviar",
         "Clear chat": "Limpar conversa",
         "Restart conversation": "Reiniciar conversa"
